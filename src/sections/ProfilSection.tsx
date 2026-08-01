@@ -18,7 +18,7 @@ export default function ProfilSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight tracking-tight">
-              Karakter Agraris di Jantung Kabupaten Pinrang
+              Gambaran Umum Wilayah Siparappe
             </h3>
             <p className="text-slate-600 leading-relaxed text-sm md:text-base text-justify">
               Kelurahan Siparappe merupakan wilayah di Kecamatan Watang Sawitto, Kabupaten Pinrang, Provinsi Sulawesi Selatan. Wilayah ini memiliki karakter agraris yang ditandai oleh hamparan persawahan yang mencakup sekitar 80% dari total luas wilayah.
@@ -91,11 +91,9 @@ export default function ProfilSection() {
               alt="Peta Kelurahan Siparappe Dummy" 
               className="absolute inset-0 w-full h-full object-cover filter contrast-125"
             />
-            {/* Overlay tipis agar menyatu dengan tema, bisa dihapus nanti jika petanya sudah berwarna estetik */}
             <div className="absolute inset-0 bg-primary/5 mix-blend-multiply pointer-events-none" />
           </div>
         </div>
-
       </div>
     </section>
   );

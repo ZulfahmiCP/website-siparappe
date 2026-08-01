@@ -5,7 +5,7 @@ export interface Pegawai {
 }
 
 export const strukturPemerintahan: Pegawai[] = [
-  { nama: "Ruslan, SE., MM", jabatan: "Lurah", nip: "197103231998031005" },
+  { nama: "Masri, SE", jabatan: "Lurah", nip: "197103231998031005" },
   { nama: "Ikbal, S.Sos", jabatan: "Sekretaris", nip: "198209242008011009" },
   { nama: "Masdar, SH.", jabatan: "Kasi Pemerintahan & Trantib", nip: "196812312007011030" },
   { nama: "Suwarti, SH.", jabatan: "Kasi Pembangunan", nip: "197411132007012009" },
