@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import HeroSection from './sections/HeroSection';
 import ProfilSection from './sections/ProfilSection';
 import StatistikSection from './sections/StatistikSection';
@@ -22,6 +23,7 @@ export default function App() {
         <KontakSection />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

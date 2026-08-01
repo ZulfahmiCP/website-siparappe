@@ -1,4 +1,5 @@
 import { dataGeografis } from '../data/statistikData';
+import { Map } from 'lucide-react';
 
 export default function ProfilSection() {
   return (
@@ -14,7 +15,7 @@ export default function ProfilSection() {
           <div className="w-12 h-1 bg-accent mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight tracking-tight">
               Karakter Agraris di Jantung Kabupaten Pinrang
@@ -27,11 +28,11 @@ export default function ProfilSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <div className="p-5 bg-white rounded-[2rem] rounded-tr-md shadow-sm border border-slate-100 flex-1">
+              <div className="p-5 bg-white rounded-[2rem] rounded-tr-md shadow-[0_4px_20px_rgb(0,0,0,0.02)] border border-slate-50 flex-1">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Luas Wilayah</span>
                 <span className="text-2xl font-extrabold text-primary block mt-1 tracking-tight">{dataGeografis.luasWilayah}</span>
               </div>
-              <div className="p-5 bg-white rounded-[2rem] rounded-tl-md shadow-sm border border-slate-100 flex-1">
+              <div className="p-5 bg-white rounded-[2rem] rounded-tl-md shadow-[0_4px_20px_rgb(0,0,0,0.02)] border border-slate-50 flex-1">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Lahan Persawahan</span>
                 <span className="text-2xl font-extrabold text-primary block mt-1 tracking-tight">{dataGeografis.lahanPersawahan}</span>
               </div>
@@ -70,6 +71,31 @@ export default function ProfilSection() {
             </div>
           </div>
         </div>
+
+        <div className="w-full bg-white rounded-[3rem] p-6 md:p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-50 flex flex-col lg:flex-row items-center gap-10">
+          <div className="w-full lg:w-1/3 space-y-6">
+            <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+              <Map className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-3">Peta Topografi & Administratif</h4>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                Pemetaan presisi wilayah administrasi dan tata guna lahan Kelurahan Siparappe guna menunjang akurasi data geografis dan batas lingkungan.
+              </p>
+            </div>
+          </div>
+          
+          <div className="w-full lg:w-2/3 h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden relative bg-slate-100 border border-slate-200">
+            <img 
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop" 
+              alt="Peta Kelurahan Siparappe Dummy" 
+              className="absolute inset-0 w-full h-full object-cover filter contrast-125"
+            />
+            {/* Overlay tipis agar menyatu dengan tema, bisa dihapus nanti jika petanya sudah berwarna estetik */}
+            <div className="absolute inset-0 bg-primary/5 mix-blend-multiply pointer-events-none" />
+          </div>
+        </div>
+
       </div>
     </section>
   );
