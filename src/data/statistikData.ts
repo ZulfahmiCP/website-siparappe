@@ -31,6 +31,11 @@ export interface Fasilitas {
   lapanganOlahraga: number;
 }
 
+export interface Pertanian {
+  jumlahKepalaTani: string;
+  luasSawah: string;
+}
+
 export const dataDemografiBanner: DemografiUmum = {
   totalPenduduk: "2782 Jiwa",
   lakiLaki: "1359",
@@ -61,4 +66,9 @@ export const dataFasilitas: Fasilitas = {
   sekolahDasar: 2,
   tamanKanakKanak: 2,
   lapanganOlahraga: 3
+};
+
+export const dataPertanian: Pertanian = {
+  jumlahKepalaTani: "54",
+  luasSawah: "xxx Ha"
 };
