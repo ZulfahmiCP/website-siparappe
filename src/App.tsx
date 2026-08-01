@@ -4,6 +4,9 @@ import HeroSection from './sections/HeroSection';
 import ProfilSection from './sections/ProfilSection';
 import StatistikSection from './sections/StatistikSection';
 import PemerintahanSection from './sections/PemerintahanSection';
+import PotensiSection from './sections/PotensiSection';
+import GaleriSection from './sections/GaleriSection';
+import KontakSection from './sections/KontakSection';
 
 export default function App() {
   return (
@@ -14,6 +17,9 @@ export default function App() {
         <ProfilSection />
         <StatistikSection />
         <PemerintahanSection />
+        <PotensiSection />
+        <GaleriSection />
+        <KontakSection />
       </main>
       <Footer />
     </div>
