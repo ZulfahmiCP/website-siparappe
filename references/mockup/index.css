@@ -4,17 +4,4 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
-  
-  --color-primary: #3d5a45;
-  --color-primary-light: #527a5d;
-  --color-primary-dark: #2a3d2f;
-  --color-accent: #c8102e;
-  --color-surface: #f4f7f5;
-}
-
-body {
-  background-color: #ffffff;
-  color: #0f172a;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
