@@ -19,7 +19,6 @@ export default function Navbar() {
     { id: 'statistik', label: 'Statistik' },
     { id: 'pemerintahan', label: 'Pemerintahan' },
     { id: 'potensi', label: 'Potensi Lokal' },
-    { id: 'galeri', label: 'Galeri' },
     { id: 'kontak', label: 'Kontak' }
   ];
 

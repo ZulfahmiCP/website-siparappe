@@ -6,7 +6,6 @@ import ProfilSection from './sections/ProfilSection';
 import StatistikSection from './sections/StatistikSection';
 import PemerintahanSection from './sections/PemerintahanSection';
 import PotensiSection from './sections/PotensiSection';
-import GaleriSection from './sections/GaleriSection';
 import KontakSection from './sections/KontakSection';
 
 export default function App() {
@@ -19,7 +18,6 @@ export default function App() {
         <StatistikSection />
         <PemerintahanSection />
         <PotensiSection />
-        <GaleriSection />
         <KontakSection />
       </main>
       <Footer />
