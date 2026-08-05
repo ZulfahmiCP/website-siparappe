@@ -13,7 +13,7 @@ export const dataPotensi: Potensi[] = [
     deskripsi: "Hadir dan aktifnya lembaga yang berperan mengelola pembagian air dan merawat saluran irigasi secara gotong royong sehingga menjamin produktivitas lahan pertanian Siparappe."
   },
   {
-    judul: "Tradisi Mapalilli",
+    judul: "Tradisi Mappalili",
     deskripsi: "Pelestarian Warisan Budaya Tak Benda berupa tradisi masyarakat berkumpul dan berdoa bersama sebelum mengawali prosesi atau musim penanaman padi."
   }
 ];

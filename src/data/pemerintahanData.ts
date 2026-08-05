@@ -13,7 +13,7 @@ export const strukturPemerintahan: Pegawai[] = [
   { nama: "Rasmahwati, S.Pd.", jabatan: "Staff", nip: "198212312006042067" },
   { nama: "Rindiani", jabatan: "Staff", nip: "20040302025212006" },
   { nama: "Wahyuddin", jabatan: "Kep. Lingkungan Sarempo" },
-  { nama: "H. P. Mamming", jabatan: "Kep. Lingkungan Bua-Bua" },
+  { nama: "", jabatan: "Kep. Lingkungan Bua-Bua" },
   { nama: "Sadar Capong", jabatan: "Kep. Lingkungan Madallo" }
 ];
 
