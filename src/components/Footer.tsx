@@ -5,7 +5,7 @@ export default function Footer() {
         
         <div className="flex items-center gap-4">
           <img 
-            src="/assets/logo/logo-pinrang.png" 
+            src="/assets/logo/logo-pinrang.png"  
             alt="Logo Kabupaten Pinrang" 
             className="w-10 h-12 md:w-12 md:h-14 object-contain drop-shadow-sm"
           />
