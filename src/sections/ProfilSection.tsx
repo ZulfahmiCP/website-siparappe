@@ -78,7 +78,7 @@ export default function ProfilSection() {
               <Map className="w-7 h-7" />
             </div>
             <h4 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Peta Topografi & Administratif
+              Peta Persebaran Fasilitas Umum
             </h4>
           </div>
           

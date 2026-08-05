@@ -34,7 +34,7 @@ export default function HeroSection() {
             className="text-base sm:text-lg md:text-xl text-slate-100 font-normal max-w-2xl mx-auto leading-relaxed"
             style={{ textShadow: '0 2px 6px rgba(0,0,0,0.4)' }}
           >
-            Portal informasi resmi kemitraan, pelayanan administrasi, dan pembangunan berkelanjutan di Kabupaten Pinrang.
+            Portal informasi resmi kemitraan, potensi wilayah, dan pembangunan berkelanjutan Kelurahan Siparappe, Kabupaten Pinrang.
           </p>
 
           <div className="pt-4 flex justify-center gap-4">

@@ -14,6 +14,7 @@ export default function StatistikSection() {
           </h2>
         </div>
 
+        {/* Grid dikembalikan menjadi 4 kolom */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="p-8 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 flex flex-col items-center text-center">
             <Map className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
@@ -21,18 +22,17 @@ export default function StatistikSection() {
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Luas Wilayah</span>
           </div>
           
-          <div className="p-8 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 flex flex-col items-center text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-2 h-full bg-accent" />
+          <div className="p-8 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 flex flex-col items-center text-center">
             <Tractor className="w-10 h-10 text-accent mb-4" strokeWidth={1.5} />
             <span className="text-3xl font-extrabold text-slate-900 tracking-tight mb-1">{dataPertanian.jumlahKepalaTani}</span>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Kepala Tani</span>
           </div>
 
-          <div className="p-8 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 flex flex-col items-center text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-2 h-full bg-primary" />
+          {/* Kotak Lahan Persawahan ditambahkan kembali tanpa garis warna */}
+          <div className="p-8 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 flex flex-col items-center text-center">
             <Map className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
-            <span className="text-3xl font-extrabold text-slate-900 tracking-tight mb-1">{dataPertanian.luasSawah}</span>
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Luas Sawah</span>
+            <span className="text-3xl font-extrabold text-slate-900 tracking-tight mb-1">1974 Ha</span>
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Lahan Persawahan</span>
           </div>
 
           <div className="p-8 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 flex flex-col items-center text-center">
