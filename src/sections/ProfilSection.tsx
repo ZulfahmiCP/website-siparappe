@@ -72,28 +72,25 @@ export default function ProfilSection() {
           </div>
         </div>
 
-        <div className="w-full bg-white rounded-[3rem] p-6 md:p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-50 flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-1/3 space-y-6">
-            <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
-              <Map className="w-6 h-6" />
+        <div className="w-full bg-white rounded-[3rem] p-6 md:p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-50 flex flex-col">
+          <div className="flex flex-col items-center text-center mb-8 max-w-3xl mx-auto">
+            <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-5">
+              <Map className="w-7 h-7" />
             </div>
-            <div>
-              <h4 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-3">Peta Topografi & Administratif</h4>
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-                Pemetaan presisi wilayah administrasi dan tata guna lahan Kelurahan Siparappe guna menunjang akurasi data geografis dan batas lingkungan.
-              </p>
-            </div>
+            <h4 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Peta Topografi & Administratif
+            </h4>
           </div>
           
-          <div className="w-full lg:w-2/3 h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden relative bg-slate-100 border border-slate-200">
+          <div className="w-full h-[400px] md:h-[600px] lg:h-[800px] rounded-[2rem] overflow-hidden relative bg-slate-100 border border-slate-200">
             <img 
-              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop" 
-              alt="Peta Kelurahan Siparappe Dummy" 
-              className="absolute inset-0 w-full h-full object-cover filter contrast-125"
+              src="/assets/peta-siparappe.jpg" 
+              alt="Peta Kelurahan Siparappe" 
+              className="absolute inset-0 w-full h-full object-contain bg-white"
             />
-            <div className="absolute inset-0 bg-primary/5 mix-blend-multiply pointer-events-none" />
           </div>
         </div>
+
       </div>
     </section>
   );

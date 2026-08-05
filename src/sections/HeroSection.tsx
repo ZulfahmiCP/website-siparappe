@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section id="beranda" className="relative w-full h-screen overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1559628233-eb1b1a45564b?q=80&w=1920&auto=format&fit=crop')` }}
+        style={{ backgroundImage: `url('/assets/front-page.jpeg')` }}
       />
       <div className="absolute inset-0 bg-black/45" />
 
