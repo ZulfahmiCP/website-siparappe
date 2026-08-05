@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,9 +33,14 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+        
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('beranda')}>
-          <div className={`p-2 rounded-xl transition-colors duration-500 ${isScrolled ? 'bg-primary text-white' : 'bg-white/10 text-white backdrop-blur-sm border border-white/20'}`}>
-            <Shield className="w-6 h-6" />
+          <div className="relative flex items-center justify-center">
+            <img 
+              src="/assets/logo/logo-pinrang.png" 
+              alt="Logo Kabupaten Pinrang" 
+              className="w-10 h-12 object-contain drop-shadow-md"
+            />
           </div>
           <div className="flex flex-col">
             <span className={`text-lg font-bold leading-none tracking-tight transition-colors duration-500 ${isScrolled ? 'text-slate-900' : 'text-white'}`}>

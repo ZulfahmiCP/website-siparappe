@@ -8,10 +8,11 @@ export default function PotensiSection() {
     <Sun className="w-8 h-8 text-accent" strokeWidth={1.5} />,
   ];
 
+  // Tautan gambar sekarang mengarah ke folder public/assets/potensi/
   const images = [
-    "https://images.unsplash.com/photo-1592652433060-3cbbfdfdb1ce?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=800&auto=format&fit=crop",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwnja-clrmsDC-aJUbCSkOW6vNmN_gRMqFZJwTsBhIKg&s=10",
+    "/assets/potensi/rth.jpeg",           // Ubah nama file ini sesuai gambar pertamamu
+    "/assets/potensi/p3a.png",             // Ubah nama file ini sesuai gambar keduamu
+    "/assets/potensi/tradisi-mappalilil.jpg", // Gambar yang terlihat dari screenshotmu
   ];
 
   return (
