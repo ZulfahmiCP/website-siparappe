@@ -1,4 +1,3 @@
-import { dataGeografis } from '../data/statistikData';
 import { Map } from 'lucide-react';
 
 export default function ProfilSection() {
@@ -30,11 +29,11 @@ export default function ProfilSection() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <div className="p-5 bg-white rounded-[2rem] rounded-tr-md shadow-[0_4px_20px_rgb(0,0,0,0.02)] border border-slate-50 flex-1">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Luas Wilayah</span>
-                <span className="text-2xl font-extrabold text-primary block mt-1 tracking-tight">{dataGeografis.luasWilayah}</span>
+                <span className="text-2xl font-extrabold text-primary block mt-1 tracking-tight">2421 Ha</span>
               </div>
               <div className="p-5 bg-white rounded-[2rem] rounded-tl-md shadow-[0_4px_20px_rgb(0,0,0,0.02)] border border-slate-50 flex-1">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Lahan Persawahan</span>
-                <span className="text-2xl font-extrabold text-primary block mt-1 tracking-tight">{dataGeografis.lahanPersawahan}</span>
+                <span className="text-2xl font-extrabold text-primary block mt-1 tracking-tight">1974 Ha</span>
               </div>
             </div>
           </div>
@@ -47,19 +46,19 @@ export default function ProfilSection() {
             <div className="space-y-4 text-sm md:text-base">
               <div className="flex items-center justify-between pb-4 border-b border-slate-50">
                 <span className="text-slate-500 font-medium">Utara</span>
-                <span className="font-bold text-slate-800">{dataGeografis.batas.utara}</span>
+                <span className="font-bold text-slate-800">Kecamatan Cempa</span>
               </div>
               <div className="flex items-center justify-between pb-4 border-b border-slate-50">
                 <span className="text-slate-500 font-medium">Selatan</span>
-                <span className="font-bold text-slate-800">{dataGeografis.batas.selatan}</span>
+                <span className="font-bold text-slate-800">Kelurahan Sipatokkong</span>
               </div>
               <div className="flex items-center justify-between pb-4 border-b border-slate-50">
                 <span className="text-slate-500 font-medium">Barat</span>
-                <span className="font-bold text-slate-800">{dataGeografis.batas.barat}</span>
+                <span className="font-bold text-slate-800">Kecamatan Mattiro Sompe</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-500 font-medium">Timur</span>
-                <span className="font-bold text-slate-800">{dataGeografis.batas.timur}</span>
+                <span className="font-bold text-slate-800">Kelurahan Salo</span>
               </div>
             </div>
 

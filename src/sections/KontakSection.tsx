@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { MapPin, Phone, Mail, Loader2 } from 'lucide-react';
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg 
@@ -16,6 +17,37 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 );
 
 export default function KontakSection() {
+  const [dataKontak, setDataKontak] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://sheetdb.io/api/v1/e6q9285kh2er3?sheet=kontak')
+      .then(res => res.json())
+      .then(data => {
+        setDataKontak(data);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        console.error("Gagal mengambil data kontak:", err);
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section id="kontak" className="w-full bg-white py-24 flex flex-col items-center justify-center min-h-[50vh]">
+        <Loader2 className="w-10 h-10 text-primary animate-spin mb-4" />
+        <p className="text-slate-500 font-medium animate-pulse">Memuat Informasi Kontak...</p>
+      </section>
+    );
+  }
+
+  const getKontak = (id: string) => dataKontak.find(k => k.id === id) || { teks_tampilan: '', link_tujuan: '#' };
+
+  const wa = getKontak('1');
+  const email = getKontak('2');
+  const fb = getKontak('3');
+
   return (
     <section id="kontak" className="w-full bg-white py-24 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
@@ -30,7 +62,6 @@ export default function KontakSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
           
-          {/* Kolom Kiri: Informasi Kontak */}
           <div className="space-y-10 py-4">
             <div>
               <h3 className="text-2xl font-extrabold text-slate-900 mb-4 tracking-tight">Informasi Pelayanan</h3>
@@ -40,7 +71,6 @@ export default function KontakSection() {
             </div>
 
             <div className="space-y-4">
-              {/* Alamat */}
               <a 
                 href="https://www.google.com/maps/search/?api=1&query=Kantor+Kelurahan+Siparappe" 
                 target="_blank" 
@@ -52,13 +82,14 @@ export default function KontakSection() {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold text-slate-500 block mb-1 uppercase tracking-widest">Alamat Kantor</span>
-                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-primary transition-colors">Jl. Poros Pinrang-Polman, Kel. Siparappe</span>
+                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-primary transition-colors">
+                    Jl. Poros Pinrang-Polman, Kel. Siparappe
+                  </span>
                 </div>
               </a>
               
-              {/* Telepon / WA */}
               <a 
-                href="https://wa.me/6285696992589" 
+                href={wa.link_tujuan} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-5 p-4 -ml-4 rounded-2xl hover:bg-slate-50 hover:shadow-sm transition-all group cursor-pointer"
@@ -68,13 +99,14 @@ export default function KontakSection() {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold text-slate-500 block mb-1 uppercase tracking-widest">WhatsApp / Telepon</span>
-                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-green-600 transition-colors">0856 9699 2589</span>
+                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-green-600 transition-colors">
+                    {wa.teks_tampilan}
+                  </span>
                 </div>
               </a>
 
-              {/* Email */}
               <a 
-                href="mailto:siparappepinrang@gmail.com" 
+                href={email.link_tujuan} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-5 p-4 -ml-4 rounded-2xl hover:bg-slate-50 hover:shadow-sm transition-all group cursor-pointer"
@@ -84,13 +116,14 @@ export default function KontakSection() {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold text-slate-500 block mb-1 uppercase tracking-widest">Email Resmi</span>
-                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-accent transition-colors">siparappepinrang@gmail.com</span>
+                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-accent transition-colors">
+                    {email.teks_tampilan}
+                  </span>
                 </div>
               </a>
 
-              {/* Facebook */}
               <a 
-                href="https://www.facebook.com/share/1HrzD2cNeY/" 
+                href={fb.link_tujuan} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-5 p-4 -ml-4 rounded-2xl hover:bg-slate-50 hover:shadow-sm transition-all group cursor-pointer"
@@ -100,13 +133,14 @@ export default function KontakSection() {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold text-slate-500 block mb-1 uppercase tracking-widest">Facebook</span>
-                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-blue-600 transition-colors">Kelurahan Siparappe</span>
+                  <span className="text-slate-800 font-bold text-sm md:text-base group-hover:text-blue-600 transition-colors">
+                    {fb.teks_tampilan}
+                  </span>
                 </div>
               </a>
             </div>
           </div>
 
-          {/* Kolom Kanan: Peta Google Maps dipindahkan ke sini */}
           <div className="w-full min-h-[400px] h-full lg:h-auto bg-slate-100 rounded-[3rem] overflow-hidden relative shadow-lg border border-slate-100">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31846.160100779776!2d119.6105436!3d-3.7937402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d95b77051d3fa59%3A0xb304b75a18a58a74!2sSiparappe%2C%20Kec.%20Watang%20Sawitto%2C%20Kabupaten%20Pinrang%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
